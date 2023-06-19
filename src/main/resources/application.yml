@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: spring-webflux-guide
@@ -8,6 +9,7 @@ spring:
       authentication-database: admin
       uri: mongodb://localhost:27017/test
       database: test
+      auto-index-creation: true
 
 logging:
   level:
@@ -24,3 +26,7 @@ logging:
       netty:
         http:
           client: debug
+server:
+  port: 8080
+  http2:
+    enabled: true
